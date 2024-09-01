@@ -12,10 +12,11 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+const port = process.env.PORT || 4000
 
 // Route
 
 app.use('/', userRoute)
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log("Server Start SuccessFully at : http://localhost:9090/")
 })
